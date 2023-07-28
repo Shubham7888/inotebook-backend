@@ -77,11 +77,11 @@ router.post('/login',[
         }
 
       
-
-        const passwordCompare = async(password) => {
-            const match = await bcrypt.compare(password, user.password);
-            return match;
-        }
+  const passwordCompare = await bcrypt.compare(password, user.password);
+        // const passwordCompare = async(password) => {
+        //     const match = await bcrypt.compare(password, user.password);
+        //     return match;
+        // }
 
                
         if(!passwordCompare){
